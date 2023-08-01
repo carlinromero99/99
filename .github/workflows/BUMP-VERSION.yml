@@ -9,10 +9,8 @@ jobs:
   bump-version:
     runs-on: ubuntu-latest
     steps:
-      - name: Generate Release Github
-        id: generate-release
-        if: github.run_attempt == 1
-        uses: rymndhng/release-on-push-action@v0.23.1
-        with:
-          bump_version_scheme: minor
-          tag_prefix: v
+    - name: Create GITHUB release
+      uses: extenda/actions/conventional-release@v0
+      id: release
+      env:
+        GITHUB_TOKEN: ${{ secrets.github-token }}

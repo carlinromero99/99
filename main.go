@@ -2,6 +2,10 @@ package main
 
 import "log"
 
+func GetName() string {
+	return "carlos"
+}
+
 func main() {
-	log.Println("hello world!")
+	log.Printf("hello %s!", GetName())
 }

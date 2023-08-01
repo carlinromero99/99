@@ -2,10 +2,21 @@ package main
 
 import "log"
 
-func GetName() string {
-	return "carlos"
+type Person struct {
+	name string
+}
+
+func NewPerson(name string) *Person {
+	return &Person{
+		name: name,
+	}
+}
+
+func (p *Person) GetName() string {
+	return p.name
 }
 
 func main() {
-	log.Printf("hello %s!", GetName())
+	person := NewPerson("Carlos")
+	log.Printf("hello %s!", person.GetName())
 }

@@ -23,6 +23,6 @@ func (p *Person) GetAge() int64 {
 }
 
 func main() {
-	person := NewPerson("Carlos", 29)
+	person := NewPerson("Carlos", 30)
 	log.Printf("hello %s!, you are %d", person.GetName(), person.GetAge())
 }

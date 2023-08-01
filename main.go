@@ -24,5 +24,5 @@ func (p *Person) GetAge() int64 {
 
 func main() {
 	person := NewPerson("Carlos", 29)
-	log.Printf("hello %s!, yo are %d", person.GetName(), person.GetAge())
+	log.Printf("hello %s!, you are %d", person.GetName(), person.GetAge())
 }
